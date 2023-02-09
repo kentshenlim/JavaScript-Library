@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  --LIGHT-YELLOW: #ffffcc; /* Customize properties here*/
+  --DEEP-YELLOW: #d3be69;
+  --MAX-CHAR-PER-ROW: 72ch;
+  --BORDER-RADIUS-BIG: 1rem;
+  --PADDING-BIG: 1rem;
+}
+
+:root,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--LIGHT-YELLOW);
+  padding: var(--PADDING-BIG);
+}
+
+div.main-panel {
+  border: solid black 3px;
+  border-radius: var(--BORDER-RADIUS-BIG);
+  width: max(50%, var(--MAX-CHAR-PER-ROW));
+  height: 100%;
+  padding: var(--PADDING-BIG);
+  margin: 0 auto; /* Horizontal centering */
+  background-color: var(--DEEP-YELLOW);
+}
