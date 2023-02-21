@@ -10,6 +10,23 @@
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
+  --FONT-BIG: 3.5rem; /* Default if media query not disabled */
+  --FONT-MEDIUM: 1.5rem;
+  --FONT-SMALL: 1.2rem;
+}
+
+/* font-size control */
+@media screen and (max-width: 5000px) {
+  * {
+    --FONT-BIG: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    --FONT-BIG: 3rem;
+    --DEEP-YELLOW: green;
+  }
 }
 
 :root {
@@ -37,4 +54,11 @@ div.main-wrapper {
   padding: var(--PADDING-BIG);
   margin: 0 auto; /* Horizontal centering */
   background-color: var(--DEEP-YELLOW);
+}
+
+h1 {
+  border: solid red 3px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--FONT-BIG);
 }
