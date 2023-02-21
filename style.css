@@ -1,3 +1,8 @@
+@font-face {
+  font-family: cute-font;
+  src: url(font/Pacifico-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
   --LIGHT-YELLOW: #ffffcc; /* Customize properties here*/
@@ -5,6 +10,10 @@
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
+}
+
+:root {
+  font-family: cute-font;
 }
 
 :root,
@@ -20,7 +29,7 @@ body {
   padding: var(--PADDING-BIG);
 }
 
-div.main-panel {
+div.main-wrapper {
   border: solid black 3px;
   border-radius: var(--BORDER-RADIUS-BIG);
   width: max(50%, var(--MAX-CHAR-PER-ROW));
