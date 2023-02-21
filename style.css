@@ -19,7 +19,7 @@
 /* Mobile display control */
 @media screen and (max-width: 800px) {
   * {
-    --FONT-BIG: 2rem;
+    --FONT-BIG: 1.5rem;
     --FONT-MEDIUM: 1.2rem;
     --FONT-SMALL: 1rem;
     --MAIN-WRAPPER-WIDTH: 90%;
