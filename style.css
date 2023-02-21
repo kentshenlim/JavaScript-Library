@@ -11,7 +11,7 @@
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
   --FONT-BIG: 3rem; /* Default if media query not disabled */ /* @media */
-  --FONT-MEDIUM: 1.5rem; /* @media*/
+  --FONT-MEDIUM: 2rem; /* @media*/
   --FONT-SMALL: 1.2rem; /* @media */
   --MAIN-WRAPPER-WIDTH: max(60%, var(--MAX-CHAR-PER-ROW)); /* @media */
 }
@@ -54,7 +54,7 @@ div.main-wrapper {
   background-color: var(--DEEP-YELLOW);
 }
 
-div.navbar-wrapper {
+.navbar-wrapper {
   border: solid red 3px;
   color: #504a0694;
   margin: 0 auto;
@@ -68,4 +68,19 @@ div.navbar-wrapper {
   font-size: var(--FONT-BIG);
   text-decoration: underline;
   margin-right: auto; /* Push the three buttons to right*/
+}
+
+.navbar-wrapper > nav {
+  display: flex;
+}
+
+.navbar-wrapper > nav > button {
+  background-color: transparent;
+  border: solid red 3px;
+  font-size: var(--FONT-MEDIUM);
+  cursor: pointer;
+}
+
+.navbar-wrapper > nav > button > img {
+  height: 1em;
 }
