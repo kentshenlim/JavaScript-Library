@@ -84,3 +84,20 @@ div.main-wrapper {
 .navbar-wrapper > nav > button > img {
   height: 1em;
 }
+
+/* Hover effects */
+img.add {
+  transition: transform 0.7s ease-in-out;
+}
+
+img.add:hover {
+  transform: rotate(360deg);
+}
+
+nav.add-stats-info :not(:first-child) img:hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+nav.add-stats-info :not(:first-child) img:hover {
+  transform: scale(1.2);
+}

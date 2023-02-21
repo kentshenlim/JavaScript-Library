@@ -43,3 +43,14 @@
 
 - Achievable with point 2 if the `max-width` in screen media query is high
   enough. Smooth transition!
+
+## Icon button
+
+1. Put img in button
+
+2. To make the img follow the height, set the `button` `font-size` in terms of
+   `rem` and set the `img` `height` in terms of `em`.
+
+## Gap between one item and the rest in flexbox
+
+1. `margin-right: auto` for the left item
