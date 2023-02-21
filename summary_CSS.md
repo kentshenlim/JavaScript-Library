@@ -35,3 +35,6 @@
   ```
 
   Switch to 90% of phone screen width.
+
+- For smooth transition when the viewport width is changing you might need to
+  use higher value for the `max-width` in media query.

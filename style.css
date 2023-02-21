@@ -10,14 +10,14 @@
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
-  --FONT-BIG: 3.5rem; /* Default if media query not disabled */ /* @media */
+  --FONT-BIG: 3rem; /* Default if media query not disabled */ /* @media */
   --FONT-MEDIUM: 1.5rem; /* @media*/
   --FONT-SMALL: 1.2rem; /* @media */
-  --MAIN-WRAPPER-WIDTH: max(50%, var(--MAX-CHAR-PER-ROW)); /* @media */
+  --MAIN-WRAPPER-WIDTH: max(60%, var(--MAX-CHAR-PER-ROW)); /* @media */
 }
 
 /* Mobile display control */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   * {
     --FONT-BIG: 2rem;
     --FONT-MEDIUM: 1.2rem;
