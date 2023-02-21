@@ -10,22 +10,19 @@
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
-  --FONT-BIG: 3.5rem; /* Default if media query not disabled */
-  --FONT-MEDIUM: 1.5rem;
-  --FONT-SMALL: 1.2rem;
+  --FONT-BIG: 3.5rem; /* Default if media query not disabled */ /* @media */
+  --FONT-MEDIUM: 1.5rem; /* @media*/
+  --FONT-SMALL: 1.2rem; /* @media */
+  --MAIN-WRAPPER-WIDTH: max(50%, var(--MAX-CHAR-PER-ROW)); /* @media */
 }
 
-/* font-size control */
-@media screen and (max-width: 5000px) {
+/* Mobile display control */
+@media screen and (max-width: 480px) {
   * {
-    --FONT-BIG: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  * {
-    --FONT-BIG: 3rem;
-    --DEEP-YELLOW: green;
+    --FONT-BIG: 2rem;
+    --FONT-MEDIUM: 1.2rem;
+    --FONT-SMALL: 1rem;
+    --MAIN-WRAPPER-WIDTH: 90%;
   }
 }
 
@@ -44,12 +41,13 @@ body {
   height: 100vh;
   background-color: var(--LIGHT-YELLOW);
   padding: var(--PADDING-BIG);
+  border: solid red 3px;
 }
 
 div.main-wrapper {
   border: solid black 3px;
   border-radius: var(--BORDER-RADIUS-BIG);
-  width: max(50%, var(--MAX-CHAR-PER-ROW));
+  width: var(--MAIN-WRAPPER-WIDTH);
   height: 100%;
   padding: var(--PADDING-BIG);
   margin: 0 auto; /* Horizontal centering */
