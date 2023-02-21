@@ -38,3 +38,8 @@
 
 - For smooth transition when the viewport width is changing you might need to
   use higher value for the `max-width` in media query.
+
+3. Padding of body element that is changing
+
+- Achievable with point 2 if the `max-width` in screen media query is high
+  enough. Smooth transition!

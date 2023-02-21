@@ -54,9 +54,18 @@ div.main-wrapper {
   background-color: var(--DEEP-YELLOW);
 }
 
-h1 {
+div.navbar-wrapper {
   border: solid red 3px;
+  color: #504a0694;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+}
+
+.navbar-wrapper > h1 {
+  margin: 0;
+  display: inline-block;
+  border-radius: var(--BORDER-RADIUS-BIG);
   font-size: var(--FONT-BIG);
+  text-decoration: underline;
+  margin-right: auto; /* Push the three buttons to right*/
 }
