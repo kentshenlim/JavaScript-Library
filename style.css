@@ -112,7 +112,10 @@ nav.add-stats-info :not(:first-child) img:hover {
 
 /* Forms styling */
 .form-wrapper {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 450px;
   height: 450px;
   background-color: transparent;
