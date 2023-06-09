@@ -67,14 +67,14 @@ body:before {
 }
 
 div.main-wrapper {
-  border: solid black 3px;
   border-radius: var(--BORDER-RADIUS-BIG);
   width: var(--MAIN-WRAPPER-WIDTH);
   height: 100%;
   padding: var(--PADDING-BIG);
   margin: 0 auto; /* Horizontal centering */
   backdrop-filter: blur(10px);
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: rgba(245, 191, 39, 0.4);
+  box-shadow: 0 0 30px rgba(243, 186, 26, 0.8);
 }
 
 .navbar-wrapper {
