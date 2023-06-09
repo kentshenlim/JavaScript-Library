@@ -164,6 +164,12 @@ nav.add-stats-info :not(:first-child) img:hover {
   margin: 30px 0;
 }
 
+input {
+  font-size: var(--FONT-SMALL);
+  color: #424141;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .input-box label {
   position: absolute;
   top: 50%;
@@ -190,6 +196,7 @@ nav.add-stats-info :not(:first-child) img:hover {
   position: absolute;
   right: 8px;
   line-height: 57px;
+  color: var(--DEEP-YELLOW);
 }
 
 .btn {
@@ -208,13 +215,13 @@ nav.add-stats-info :not(:first-child) img:hover {
   right: 0;
   width: 45px;
   height: 45px;
-  font-size: 2rem;
+  font-size: var(--FONT-MEDIUM);
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom-left-radius: 20px;
   cursor: pointer;
   z-index: 1;
-  background-color: #5a4b06;
-  color: inherit;
+  background-color: var(--DEEP-YELLOW);
+  color: var(--LIGHT-YELLOW);
 }
