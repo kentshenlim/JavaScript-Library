@@ -138,10 +138,11 @@ nav.add-stats-info :not(:first-child) img:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: scale(0) translateX(-50%) translateY(-50%);
+  transform-origin: top left;
   width: 450px;
   height: 450px;
-  background-color: transparent;
+  background-color: rgba(193, 240, 106, 0.3);
   border: solid var(--DEEP-YELLOW) 3px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
@@ -150,11 +151,12 @@ nav.add-stats-info :not(:first-child) img:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  display: none; /* Default state*/
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
 }
 
 .form-wrapper.active {
-  display: flex;
+  transform: scale(1) translateX(-50%) translateY(-50%);
 }
 
 .form-wrapper .form {
@@ -238,4 +240,21 @@ input {
 .icon-close:hover {
   background-color: var(--LIGHT-YELLOW);
   color: var(--DEEP-YELLOW);
+}
+
+/* Overlay when popup */
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* Allow all events */
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all; /* Disable all events */
 }
