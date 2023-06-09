@@ -5,8 +5,8 @@
 
 * {
   box-sizing: border-box;
-  --LIGHT-YELLOW: rgba(238, 176, 5, 0.8); /* Customize properties here*/
-  --DEEP-YELLOW: #5a4b06;
+  --LIGHT-YELLOW: rgba(168, 238, 5, 0.8); /* Customize properties here*/
+  --DEEP-YELLOW: #2f5a06;
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
@@ -141,7 +141,7 @@ nav.add-stats-info :not(:first-child) img:hover {
   width: 450px;
   height: 450px;
   background-color: transparent;
-  border: solid #5a4b06 3px;
+  border: solid var(--DEEP-YELLOW) 3px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 3px var(--LIGHT-YELLOW);
@@ -149,6 +149,11 @@ nav.add-stats-info :not(:first-child) img:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  display: none; /* Default state*/
+}
+
+.form-wrapper.active {
+  display: flex;
 }
 
 .form-wrapper .form {
@@ -207,6 +212,8 @@ input {
   border-radius: 6px;
   cursor: pointer;
   font-size: var(--FONT-SMALL);
+  background-color: var(--DEEP-YELLOW);
+  margin-top: 1rem;
 }
 
 .icon-close {
@@ -224,4 +231,10 @@ input {
   z-index: 1;
   background-color: var(--DEEP-YELLOW);
   color: var(--LIGHT-YELLOW);
+}
+
+.btn:hover,
+.icon-close:hover {
+  background-color: var(--LIGHT-YELLOW);
+  color: var(--DEEP-YELLOW);
 }

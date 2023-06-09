@@ -7,6 +7,7 @@
     <title>JavaScript Library</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="js/ui.js" defer></script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -15,7 +16,9 @@
           <a class="repo-link" href="https://github.com">📚MyLibrary.io</a>
         </h1>
         <nav class="add-stats-info">
-          <button><img src="img/add.png" alt="Add icon" class="add" /></button>
+          <button id="add-btn">
+            <img src="img/add.png" alt="Add icon" class="add" />
+          </button>
           <button><img src="img/stats.png" alt="Stats icon" /></button>
           <button><img src="img/info.png" alt="Info icon" /></button>
         </nav>
@@ -26,7 +29,7 @@
       </div>
     </div>
 
-    <div class="form-wrapper">
+    <div class="form-wrapper" id="add-form">
       <span class="icon-close"><ion-icon name="close"></ion-icon></span>
       <div class="form add-book">
         <h2>Add</h2>
@@ -60,7 +63,7 @@
               name="input-status"
               value="uncompleted"
             />
-            <label for="input-status-uncompleted">Uncompleted</label>
+            <label for="input-status-uncompleted">In progress</label>
           </div>
           <button type="submit" class="btn">Save</button>
         </form>
