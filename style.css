@@ -62,6 +62,7 @@ div.main-wrapper {
 }
 
 .navbar-wrapper > h1 {
+  /* The title */
   margin: 0;
   display: inline-block;
   border-radius: var(--BORDER-RADIUS-BIG);
@@ -71,6 +72,7 @@ div.main-wrapper {
 }
 
 .navbar-wrapper > nav {
+  /* flex container for three buttons */
   display: flex;
 }
 
