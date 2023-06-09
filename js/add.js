@@ -1,4 +1,4 @@
-const addBook = (() => {
+const add = (() => {
   // Cache DOM
   const _btn = document.getElementById('add-btn');
   const _form = document.getElementById('add-form');
@@ -19,9 +19,4 @@ const addBook = (() => {
   _cross.addEventListener('click', () => {
     _togglePopup();
   });
-
-  const _library = []; // Array of object, each object contains book information
-  const addBook = (obj) => {
-    _library.push(obj);
-  };
 })();
