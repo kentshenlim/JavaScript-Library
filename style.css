@@ -5,8 +5,8 @@
 
 * {
   box-sizing: border-box;
-  --LIGHT-YELLOW: #ffffcc; /* Customize properties here*/
-  --DEEP-YELLOW: #d3be69;
+  --LIGHT-YELLOW: rgba(238, 176, 5, 0.8); /* Customize properties here*/
+  --DEEP-YELLOW: #5a4b06;
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
@@ -47,6 +47,7 @@ body {
   width: 100vw;
   height: 100vh;
   padding: var(--PADDING-BIG);
+  font-size: var(--FONT-SMALL);
 }
 
 body:before {
@@ -94,6 +95,10 @@ div.main-wrapper {
   color: black;
 }
 
+a.repo-link {
+  color: black;
+}
+
 .navbar-wrapper > nav {
   /* flex container for three buttons */
   display: flex;
@@ -136,10 +141,10 @@ nav.add-stats-info :not(:first-child) img:hover {
   width: 450px;
   height: 450px;
   background-color: transparent;
-  border: solid black 3px;
+  border: solid #5a4b06 3px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px var(--LIGHT-YELLOW);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +160,7 @@ nav.add-stats-info :not(:first-child) img:hover {
   position: relative;
   height: 50px;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--DEEP-YELLOW);
   margin: 30px 0;
 }
 
@@ -194,7 +199,7 @@ nav.add-stats-info :not(:first-child) img:hover {
   outline: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: var(--FONT-SMALL);
 }
 
 .icon-close {
@@ -203,7 +208,6 @@ nav.add-stats-info :not(:first-child) img:hover {
   right: 0;
   width: 45px;
   height: 45px;
-  border: solid red 3px;
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -211,4 +215,6 @@ nav.add-stats-info :not(:first-child) img:hover {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   z-index: 1;
+  background-color: #5a4b06;
+  color: inherit;
 }
