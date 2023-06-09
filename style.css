@@ -74,8 +74,8 @@ div.main-wrapper {
   padding: var(--PADDING-BIG);
   margin: 0 auto; /* Horizontal centering */
   backdrop-filter: blur(10px);
-  background-color: rgba(245, 191, 39, 0.4);
-  box-shadow: 0 0 30px rgba(243, 186, 26, 0.8);
+  background-color: rgba(168, 219, 74, 0.5);
+  box-shadow: 0 0 30px rgba(78, 63, 21, 0.4);
 }
 
 .navbar-wrapper {
@@ -166,7 +166,7 @@ nav.add-stats-info :not(:first-child) img:hover {
 
 input {
   font-size: var(--FONT-SMALL);
-  color: #424141;
+  color: #2c2b2b;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
