@@ -55,7 +55,6 @@ div.main-wrapper {
 }
 
 .navbar-wrapper {
-  border: solid red 3px;
   color: #504a0694;
   margin: 0 auto;
   display: flex;
@@ -69,6 +68,7 @@ div.main-wrapper {
   font-size: var(--FONT-BIG);
   text-decoration: underline;
   margin-right: auto; /* Push the three buttons to right*/
+  color: black;
 }
 
 .navbar-wrapper > nav {
@@ -78,9 +78,9 @@ div.main-wrapper {
 
 .navbar-wrapper > nav > button {
   background-color: transparent;
-  border: solid red 3px;
   font-size: var(--FONT-MEDIUM);
   cursor: pointer;
+  border: none;
 }
 
 .navbar-wrapper > nav > button > img {
