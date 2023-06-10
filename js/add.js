@@ -1,3 +1,4 @@
+import capitalize from './capitalize.js';
 import library from './library.js';
 
 const add = (() => {
@@ -22,12 +23,12 @@ const add = (() => {
     };
   }
 
-  function _getFormData() {
+  function getFormData() {
     const data = _getFormInputNodes();
     const res = {};
     Object.keys(data).forEach((key) => {
       const newKey = `${key}Val`;
-      res[newKey] = data[key].value;
+      res[newKey] = capitalize.convert(data[key].value);
     });
     return res;
   }
@@ -54,7 +55,9 @@ const add = (() => {
   _form.addEventListener('submit', (e) => {
     e.preventDefault();
     _togglePopup();
-    library.addBook(_getFormData());
+    library.addBook(getFormData());
     _clearForm();
   });
+
+  return { getFormData };
 })();
