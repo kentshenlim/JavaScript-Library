@@ -7,7 +7,7 @@
   box-sizing: border-box;
   --LIGHT-YELLOW: rgba(168, 238, 5, 0.8); /* Customize properties here*/
   --DEEP-YELLOW: #2f5a06;
-  --MEDIUM-YELLOW: rgba(196, 233, 110, 0.8);
+  --MEDIUM-YELLOW: rgba(196, 233, 110, 0.5);
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
