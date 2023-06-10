@@ -4,11 +4,6 @@ const add = (() => {
   const _form = document.getElementById('add-form');
   const _cross = document.querySelector('#add-form .icon-close');
   const _overlay = document.getElementById('overlay');
-  const _inputTitle = document.getElementById('input-title');
-  const _inputAuthors = document.getElementById('input-authors');
-  const _inputPageNumber = document.getElementById('input-page-number');
-  const _inputStatus = document.getElementsByName('input-status');
-  console.log(_inputTitle);
 
   // Function declaration
   function _togglePopup() {
@@ -16,8 +11,17 @@ const add = (() => {
     _overlay.classList.toggle('active');
   }
 
-  function _clearForm() {
-
+  function _getFormData() {
+    const inputTitle = document.getElementById('input-title').value;
+    const inputAuthors = document.getElementById('input-authors').value;
+    const inputPageNumber = document.getElementById('input-page-number').value;
+    const inputStatus = document.querySelector('input[name="input-status"]:checked').value; // Select the checked one only
+    return {
+      inputTitle,
+      inputAuthors,
+      inputPageNumber,
+      inputStatus,
+    };
   }
 
   // Bind events
@@ -31,9 +35,7 @@ const add = (() => {
 
   _form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(_form);
-
     _togglePopup();
-    console.log(_inputStatus);
+    console.log(_getFormData());
   });
 })();
