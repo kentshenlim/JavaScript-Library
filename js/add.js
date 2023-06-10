@@ -1,5 +1,6 @@
 import capitalize from './capitalize.js';
 import library from './library.js';
+import ui from './ui.js';
 
 const add = (() => {
   // Cache DOM
@@ -57,6 +58,7 @@ const add = (() => {
     _togglePopup();
     const bookData = _getFormData();
     library.addBook(bookData);
+    ui._renderNewBook(bookData);
     _clearForm();
   });
 })();
