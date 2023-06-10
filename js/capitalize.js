@@ -33,7 +33,7 @@ const capitalize = (() => {
       if (typeof str === 'string') {
         const words = str.split(' ');
         for (let i = 0; i < words.length; i += 1) {
-          if (!_commonWords.has(words[i].toLowerCase())) {
+          if (i === 0 || !_commonWords.has(words[i].toLowerCase())) {
             words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
           } else {
             words[i] = words[i].charAt(0).toLowerCase() + words[i].slice(1);
