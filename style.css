@@ -153,10 +153,12 @@ nav.add-stats-info :not(:first-child) img:hover {
   overflow: hidden;
   z-index: 10;
   transition: all 0.3s ease-in-out;
+  display: none;
 }
 
 .form-wrapper.active {
   transform: scale(1) translateX(-50%) translateY(-50%);
+  display: flex;
 }
 
 .form-wrapper .form {
