@@ -11,17 +11,32 @@ const add = (() => {
     _overlay.classList.toggle('active');
   }
 
-  function _getFormData() {
-    const inputTitle = document.getElementById('input-title').value;
-    const inputAuthors = document.getElementById('input-authors').value;
-    const inputPageNumber = document.getElementById('input-page-number').value;
-    const inputStatus = document.querySelector('input[name="input-status"]:checked').value; // Select the checked one only
+  function _getFormInputNodes() {
     return {
-      inputTitle,
-      inputAuthors,
-      inputPageNumber,
-      inputStatus,
+      inputTitle: document.getElementById('input-title'),
+      inputAuthors: document.getElementById('input-authors'),
+      inputPageNumber: document.getElementById('input-page-number'),
+      inputStatus: document.querySelector('#add-form input[name="input-status"]:checked'), // Select the checked one only
     };
+  }
+
+  function _getFormData() {
+    const data = _getFormInputNodes();
+    const res = {};
+    Object.keys(data).forEach((key) => {
+      const newKey = `${key}Val`;
+      res[newKey] = data[key].value;
+    });
+    return res;
+  }
+
+  function _clearForm() {
+    const nodes = Object.values(_getFormInputNodes());
+    nodes.forEach((node) => {
+      const temp = node;
+      if (temp.getAttribute('type') === 'radio') temp.checked = false;
+      else temp.value = '';
+    });
   }
 
   // Bind events
@@ -37,5 +52,6 @@ const add = (() => {
     e.preventDefault();
     _togglePopup();
     console.log(_getFormData());
+    _clearForm();
   });
 })();
