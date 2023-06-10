@@ -7,6 +7,7 @@
   box-sizing: border-box;
   --LIGHT-YELLOW: rgba(168, 238, 5, 0.8); /* Customize properties here*/
   --DEEP-YELLOW: #2f5a06;
+  --MEDIUM-YELLOW: rgba(196, 233, 110, 0.8);
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
@@ -265,7 +266,6 @@ input {
 
 /* Shelf styling */
 .library-wrapper {
-  border: solid green 3px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -273,7 +273,8 @@ input {
 }
 
 .library-wrapper .book-tag-wrapper {
-  border: solid red 3px;
+  border: solid var(--DEEP-YELLOW) 3px;
+  background: var(--MEDIUM-YELLOW);
   padding: var(--PADDING-BIG);
   border-radius: var(--BORDER-RADIUS-BIG);
   display: flex;
