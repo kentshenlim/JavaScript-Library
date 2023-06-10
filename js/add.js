@@ -35,20 +35,24 @@ const add = (() => {
     nodes.forEach((node) => {
       const temp = node;
       if (temp.getAttribute('type') === 'radio') temp.checked = false;
+      // For radio button need to change the node.checked, not emptying the value like text-based
       else temp.value = '';
     });
   }
 
   // Bind events
   _btn.addEventListener('click', () => {
+    // Display form
     _togglePopup();
   });
 
   _cross.addEventListener('click', () => {
+    // Cross form
     _togglePopup();
   });
 
   _form.addEventListener('submit', (e) => {
+    // Form submission
     e.preventDefault();
     _togglePopup();
     console.log(_getFormData());
