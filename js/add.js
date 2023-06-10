@@ -23,7 +23,7 @@ const add = (() => {
     };
   }
 
-  function getFormData() {
+  function _getFormData() {
     const data = _getFormInputNodes();
     const res = {};
     Object.keys(data).forEach((key) => {
@@ -55,9 +55,8 @@ const add = (() => {
   _form.addEventListener('submit', (e) => {
     e.preventDefault();
     _togglePopup();
-    library.addBook(getFormData());
+    const bookData = _getFormData();
+    library.addBook(bookData);
     _clearForm();
   });
-
-  return { getFormData };
 })();
