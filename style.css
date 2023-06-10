@@ -15,6 +15,7 @@
   --FONT-MEDIUM: 2rem; /* @media*/
   --FONT-SMALL: 1.2rem; /* @media */
   --MAIN-WRAPPER-WIDTH: max(60%, var(--MAX-CHAR-PER-ROW)); /* @media */
+  --GRID-MINMAX: 200px; /*@media */
 }
 
 /* Mobile display control */
@@ -25,6 +26,7 @@
     --FONT-SMALL: 1rem;
     --MAIN-WRAPPER-WIDTH: 90%;
     --PADDING-BIG: 0.3rem;
+    --GRID-MINMAX: 150px;
   }
 }
 
@@ -268,7 +270,7 @@ input {
 .library-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--GRID-MINMAX), 1fr));
   grid-gap: 10px;
 }
 
