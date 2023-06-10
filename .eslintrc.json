@@ -12,6 +12,7 @@
   "rules": {
     "linebreak-style": "off",
     "no-unused-vars": "warn",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "import/extensions": "off"
   }
 }

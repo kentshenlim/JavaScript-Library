@@ -1,3 +1,5 @@
+import library from './library.js';
+
 const add = (() => {
   // Cache DOM
   const _btn = document.getElementById('add-btn');
@@ -42,20 +44,17 @@ const add = (() => {
 
   // Bind events
   _btn.addEventListener('click', () => {
-    // Display form
     _togglePopup();
   });
 
   _cross.addEventListener('click', () => {
-    // Cross form
     _togglePopup();
   });
 
   _form.addEventListener('submit', (e) => {
-    // Form submission
     e.preventDefault();
     _togglePopup();
-    console.log(_getFormData());
+    library.addBook(_getFormData());
     _clearForm();
   });
 })();
