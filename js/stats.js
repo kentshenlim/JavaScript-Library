@@ -1,4 +1,5 @@
 import library from './library.js';
+import scientific from './scientific.js';
 
 const stats = (() => {
   // Cache DOM
@@ -28,7 +29,7 @@ const stats = (() => {
     completedBooksNode.textContent = data.completedBooks;
     uncompletedBooksNode.textContent = data.uncompletedBooks;
     totalBooksNode.textContent = data.completedBooks + data.uncompletedBooks;
-    completedPagesNode.textContent = data.completedPages;
+    completedPagesNode.textContent = scientific.convert(data.completedPages);
   }
 
   // Bind events

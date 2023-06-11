@@ -1,4 +1,5 @@
 import library from './library.js';
+import scientific from './scientific.js';
 
 const ui = (() => {
   // Cache DOM
@@ -27,7 +28,7 @@ const ui = (() => {
       author.textContent,
       pageNum.textContent] = [` ${obj.inputTitleVal}`,
       ` ${obj.inputAuthorsVal}`,
-      ` ${obj.inputPageNumberVal}`];
+      ` ${scientific.convert(+obj.inputPageNumberVal)}`];
     _addIcon(title, 'book'); // Must come after textContent, else overwritten
     _addIcon(author, 'people');
     _addIcon(pageNum, 'bookmarks');
