@@ -318,3 +318,28 @@ input {
   background: var(--MEDIUM-ORANGE);
   box-shadow: 0 0 10px var(--DEEP-ORANGE);
 }
+
+/* Stats styling */
+#stats-form {
+  transform: scale(1) translateX(-50%) translateY(-50%);
+}
+
+.form-wrapper .stats-table {
+  flex-grow: 1;
+  border: solid red 3px;
+  width: 90%;
+}
+
+.stats-table td {
+  padding: var(--PADDING-BIG);
+}
+
+.stats-table tr :first-child {
+  border: solid green 3px;
+  width: 80%;
+}
+
+.stats-table tr :nth-child(2),
+.stats-table .table-sum {
+  text-align: right;
+}
