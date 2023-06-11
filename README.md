@@ -7,6 +7,7 @@
 - Display statistics on books tracked.
 - Illustration  
    ![JS Library App](demo/img/basic.png)
+- Demo run:
 
 ### Image Credits
 
