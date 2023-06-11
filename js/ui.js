@@ -25,9 +25,9 @@ const ui = (() => {
     pageNum.classList.add('book-tag-pageNum');
     [title.textContent,
       author.textContent,
-      pageNum.textContent] = [obj.inputTitleVal,
-      obj.inputAuthorsVal,
-      obj.inputPageNumberVal];
+      pageNum.textContent] = [` ${obj.inputTitleVal}`,
+      ` ${obj.inputAuthorsVal}`,
+      ` ${obj.inputPageNumberVal}`];
     _addIcon(title, 'book'); // Must come after textContent, else overwritten
     _addIcon(author, 'people');
     _addIcon(pageNum, 'bookmarks');
