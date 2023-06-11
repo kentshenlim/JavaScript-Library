@@ -8,6 +8,8 @@
   --LIGHT-YELLOW: rgba(168, 238, 5, 0.8); /* Customize properties here*/
   --DEEP-YELLOW: #2f5a06;
   --MEDIUM-YELLOW: rgba(196, 233, 110, 0.5);
+  --DEEP-ORANGE: #5a4406;
+  --MEDIUM-ORANGE: rgba(233, 204, 110, 0.5);
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
@@ -275,8 +277,6 @@ input {
 }
 
 .library-wrapper .book-tag-wrapper {
-  border: solid var(--DEEP-YELLOW) 3px;
-  background: var(--MEDIUM-YELLOW);
   padding: var(--PADDING-BIG);
   border-radius: var(--BORDER-RADIUS-BIG);
   display: flex;
@@ -307,4 +307,14 @@ input {
   box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.book-tag-wrapper.progress-completed {
+  background: var(--MEDIUM-YELLOW);
+  box-shadow: 0 0 10px var(--DEEP-YELLOW);
+}
+
+.book-tag-wrapper.progress-uncompleted {
+  background: var(--MEDIUM-ORANGE);
+  box-shadow: 0 0 10px var(--DEEP-ORANGE);
 }
