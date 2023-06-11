@@ -1,6 +1,7 @@
 import capitalize from './capitalize.js';
 import library from './library.js';
 import ui from './ui.js';
+import stats from './stats.js';
 
 const add = (() => {
   // Cache DOM
@@ -60,5 +61,6 @@ const add = (() => {
     library.addBook(bookData);
     ui._renderNewBook(bookData);
     _clearForm();
+    stats._updateStates();
   });
 })();

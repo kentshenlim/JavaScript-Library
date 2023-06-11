@@ -13,6 +13,24 @@ const stats = (() => {
     _overlay.classList.toggle('active');
   }
 
+  function getStats() {
+    const { completed: completedBooks, uncompleted: uncompletedBooks } = library.getBookCount();
+    const completedPages = library.getReadPageCount();
+    return { completedBooks, uncompletedBooks, completedPages };
+  }
+
+  function _updateStates() {
+    const completedBooksNode = document.getElementById('stats-completed-books');
+    const uncompletedBooksNode = document.getElementById('stats-uncompleted-books');
+    const totalBooksNode = document.getElementById('stats-total-books');
+    const completedPagesNode = document.getElementById('stats-completed-pages');
+    const data = getStats();
+    completedBooksNode.textContent = data.completedBooks;
+    uncompletedBooksNode.textContent = data.uncompletedBooks;
+    totalBooksNode.textContent = data.completedBooks + data.uncompletedBooks;
+    completedPagesNode.textContent = data.completedPages;
+  }
+
   // Bind events
   _btn.addEventListener('click', () => {
     _togglePopup();
@@ -21,4 +39,8 @@ const stats = (() => {
   _cross.addEventListener('click', () => {
     _togglePopup();
   });
+
+  return { getStats, _updateStates };
 })();
+
+export default stats;
