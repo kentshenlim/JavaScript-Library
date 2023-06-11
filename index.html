@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Library</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
     <script src="js/capitalize.js" type="module"></script>
     <script src="js/scientific.js" type="module"></script>
     <script src="js/library.js" type="module" defer></script>
@@ -69,7 +68,7 @@
           </div>
           <div class="input-box">
             <span class="icon"><ion-icon name="bookmarks"></ion-icon></span>
-            <input type="number" id="input-page-number" required />
+            <input type="number" min="0" id="input-page-number" required />
             <label for="input-page-number">Page number</label>
           </div>
           <div class="input-radio">
