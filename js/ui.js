@@ -34,6 +34,8 @@ const ui = (() => {
     node.appendChild(title);
     node.appendChild(author);
     node.appendChild(pageNum);
+    if (obj.inputStatusVal === 'True') node.classList.add('progress-completed');
+    else node.classList.add('progress-uncompleted');
     _libraryShelf.appendChild(node);
   }
 
