@@ -11,6 +11,6 @@
 
 ### Image Credits
 
-[1] [plus.png](https://www.pngwing.com/en/search?q=plus+Icon)  
-[2] [info.png](https://www.pngfind.com/mpng/imhbxoR_infobox-info-icon-info-icon-svg-hd-png/)  
-[3] [stats.png](https://www.freeiconspng.com/images/statistic-icon)
+1. [plus.png](https://www.pngwing.com/en/search?q=plus+Icon)
+2. [info.png](https://www.pngfind.com/mpng/imhbxoR_infobox-info-icon-info-icon-svg-hd-png/)
+3. [stats.png](https://www.freeiconspng.com/images/statistic-icon)
