@@ -7,6 +7,7 @@
   box-sizing: border-box;
   --LIGHT-YELLOW: rgba(168, 238, 5, 0.8); /* Customize properties here*/
   --DEEP-YELLOW: #2f5a06;
+  --LESS-DEEP-YELLOW: rgba(222, 238, 5, 0.349);
   --MEDIUM-YELLOW: rgba(196, 233, 110, 0.5);
   --DEEP-ORANGE: #5a4406;
   --MEDIUM-ORANGE: rgba(233, 204, 110, 0.5);
@@ -320,14 +321,11 @@ input {
 }
 
 /* Stats styling */
-#stats-form {
-  transform: scale(1) translateX(-50%) translateY(-50%);
-}
-
 .form-wrapper .stats-table {
   flex-grow: 1;
-  border: solid red 3px;
   width: 90%;
+  border-top: solid var(--DEEP-YELLOW) 3px;
+  border-bottom: solid var(--DEEP-YELLOW) 3px;
 }
 
 .stats-table td {
@@ -335,11 +333,23 @@ input {
 }
 
 .stats-table tr :first-child {
-  border: solid green 3px;
   width: 80%;
 }
 
 .stats-table tr :nth-child(2),
 .stats-table .table-sum {
   text-align: right;
+}
+
+.stats-table .table-sum + td {
+  border-top: solid var(--DEEP-YELLOW) 3px;
+  border-bottom: double var(--DEEP-YELLOW) 6px;
+}
+
+.stats-table tr:nth-child(even) {
+  background-color: var(--MEDIUM-YELLOW);
+}
+
+.stats-table tr:nth-child(odd) {
+  background-color: var(--LESS-DEEP-YELLOW);
 }
