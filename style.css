@@ -14,11 +14,13 @@
   --MAX-CHAR-PER-ROW: 72ch;
   --BORDER-RADIUS-BIG: 1rem;
   --PADDING-BIG: 1rem;
+  --PADDING-BIGGER: 1.5rem;
   --FONT-BIG: 3rem; /* Default if media query not disabled */ /* @media */
   --FONT-MEDIUM: 2rem; /* @media*/
   --FONT-SMALL: 1.2rem; /* @media */
   --MAIN-WRAPPER-WIDTH: max(60%, var(--MAX-CHAR-PER-ROW)); /* @media */
-  --GRID-MINMAX: 200px; /*@media */
+  --GRID-MINMAX: 200px; /* @media */
+  --FORM-WIDTH: 450px; /* @media*/
 }
 
 /* Mobile display control */
@@ -30,6 +32,7 @@
     --MAIN-WRAPPER-WIDTH: 90%;
     --PADDING-BIG: 0.3rem;
     --GRID-MINMAX: 150px;
+    --FORM-WIDTH: 200px;
   }
 }
 
@@ -150,7 +153,7 @@ nav.add-stats-info :not(:first-child) img:hover {
   left: 50%;
   transform: scale(0) translateX(-50%) translateY(-50%);
   transform-origin: top left;
-  width: 450px;
+  width: var(--FORM-WIDTH);
   height: 450px;
   background-color: rgba(193, 240, 106, 0.3);
   border: solid var(--DEEP-YELLOW) 3px;
@@ -171,7 +174,7 @@ nav.add-stats-info :not(:first-child) img:hover {
 
 .form-wrapper .form {
   width: 100%;
-  padding: 40px;
+  padding: var(--PADDING-BIGGER);
 }
 
 .input-box {
