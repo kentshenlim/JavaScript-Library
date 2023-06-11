@@ -285,6 +285,7 @@ input {
   justify-content: center;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  max-width: 250px;
 }
 
 .book-tag-wrapper .book-tag-title,
