@@ -356,7 +356,6 @@ input {
 }
 
 /* Info styling */
-
 .form-wrapper ul.info-statements li:not(:first-child) {
   margin-top: var(--PADDING-BIG);
 }
