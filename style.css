@@ -353,3 +353,9 @@ input {
 .stats-table tr:nth-child(odd) {
   background-color: var(--LESS-DEEP-YELLOW);
 }
+
+/* Info styling */
+
+.form-wrapper ul.info-statements li:not(:first-child) {
+  margin-top: var(--PADDING-BIG);
+}

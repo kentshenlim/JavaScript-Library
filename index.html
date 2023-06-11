@@ -13,6 +13,7 @@
     <script src="js/ui.js" type="module" defer></script>
     <script src="js/stats.js" type="module" defer></script>
     <script src="js/add.js" type="module" defer></script>
+    <script src="js/info.js" type="module" defer></script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -27,7 +28,9 @@
           <button id="stats-btn">
             <img src="img/stats.png" alt="Stats icon" />
           </button>
-          <button><img src="img/info.png" alt="Info icon" /></button>
+          <button id="info-btn">
+            <img src="img/info.png" alt="Info icon" />
+          </button>
         </nav>
       </div>
       <div class="library-wrapper" id="library-shelf">
@@ -123,6 +126,18 @@
             <td id="stats-completed-pages">0</td>
           </tr>
         </table>
+      </div>
+    </div>
+
+    <div class="form-wrapper" id="info-form">
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form add-book">
+        <h2>🤓 Info</h2>
+        <ul class="info-statements">
+          <li>Library app written to practice Vanilla JavaScript.</li>
+          <li>Pull request is welcomed.</li>
+          <li>©2023 <a href="https:github.com">Kent Lim</a></li>
+        </ul>
       </div>
     </div>
 
